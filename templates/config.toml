@@ -1,0 +1,19 @@
+host-allowlist=["*"]
+min-gas-price=0
+
+# rpc
+rpc-http-enabled=true
+rpc-http-host="0.0.0.0"
+rpc-http-port=8545
+rpc-http-cors-origins=["*"]
+rpc-http-api=["ADMIN", "CLIQUE","DEBUG", "EEA", "ETH", "IBFT", "MINER", "NET", "PERM", "PLUGINS", "PRIV", "QBFT", "TRACE", "TXPOOL",  "WEB3"]
+
+# ws
+rpc-ws-enabled=true
+rpc-ws-port=8546
+
+# metrics
+metrics-enabled=true
+metrics-port=9646
+
+tx-pool-limit-by-account-percentage=1

@@ -1,0 +1,28 @@
+version: "3.4"
+
+networks:
+  besu-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.16.239.0/24
+
+services:
+  bootnode:
+    container_name: bootnode
+    image: hyperledger/besu:23.4.4
+    entrypoint:
+      - /bin/bash
+      - -c
+      - |
+        /opt/besu/bin/besu --data-path=/opt/besu/data \
+        --genesis-file=/opt/besu/genesis.json --rpc-http-enabled \
+        --host-allowlist="*" --rpc-http-cors-origins="all" \
+        --rpc-http-api=ETH,NET,IBFT;
+
+    volumes:
+      - ./genesis.json:/opt/besu/genesis.json
+      - ./node-1/data:/opt/besu/data
+    networks:
+      besu-network:
+        ipv4_address: 172.16.239.30
