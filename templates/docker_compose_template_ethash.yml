@@ -8,8 +8,8 @@ networks:
         - subnet: 172.16.239.0/24
 
 services:
-  bootnode:
-    container_name: bootnode
+  node-1:
+    container_name: node-1
     image: hyperledger/besu:23.4.4
     entrypoint:
       - /bin/bash
