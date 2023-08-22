@@ -3,7 +3,7 @@
         "blockchain": "ethereum"
     },
     "ethereum": {
-        "url": "ws://172.16.239.33:8546",
+        "url": "ws://172.16.239.31:8546",
         "contractDeployerAddress": "0xfe3b557e8fb62b89f4916b721be55ceb828dbd73",
         "contractDeployerAddressPrivateKey": "0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63",
         "fromAddress": "0xfe3b557e8fb62b89f4916b721be55ceb828dbd73",

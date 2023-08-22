@@ -32,5 +32,10 @@
         "balance": "90000000000000000000000"
       }
     }
+  },
+  "blockchain": {
+    "nodes": {
+        "generate": true
+    }
   }
 }
