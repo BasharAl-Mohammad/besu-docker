@@ -8,7 +8,7 @@ test:
         performance with simple account opening & querying transactions.
     workers:
         type: local
-        number: 10
+        number: 1
     rounds:
     -   label: open
         description: Test description for the opening of an account through the deployed

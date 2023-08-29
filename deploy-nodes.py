@@ -19,7 +19,7 @@ def generate_docker_compose(num_nodes):
         enode = enode.read()
 
     for node_num in range(2, num_nodes + 1):
-        ip_suffix = node_num + 31
+        ip_suffix = node_num + 7
         compose_content += node_template.format(node_num=node_num, ip_suffix=ip_suffix,enode=enode[2:])
         
     with open("docker-compose.yml", "w") as file:
@@ -318,10 +318,10 @@ def generate_ethash_structure(ARGS):
     with open("genesis.json", 'w') as file:
         json.dump(data, file, indent=4)
 
-    with open("templates/docker_compose_template_ethash.yml", "r") as docker_compose_template_file:
+    with open("templates/docker_compose_template.yml", "r") as docker_compose_template_file:
         docker_compose_template = docker_compose_template_file.read()
 
-    with open("templates/node_template_ethash.yml", "r") as node_template_file:
+    with open("templates/node_template.yml", "r") as node_template_file:
         node_template = node_template_file.read()
 
     compose_content = docker_compose_template
@@ -330,7 +330,7 @@ def generate_ethash_structure(ARGS):
         enode = enode.read()
 
     for node_num in range(2, ARGS[0] + 1):
-        ip_suffix = node_num + 31
+        ip_suffix = node_num + 7
 
         compose_content += node_template.format(node_num=node_num, ip_suffix=ip_suffix,enode=enode[2:])
         

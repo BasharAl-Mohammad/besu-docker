@@ -19,10 +19,11 @@ services:
         --genesis-file=/opt/besu/genesis.json --rpc-http-enabled --rpc-http-port=8545 \
         --host-allowlist="*" --rpc-http-cors-origins="all" \
         --rpc-http-api=ADMIN, IBFT, QBFT, CLIQUE, ETH, NET, TXPOOL, WEB3 \
-        --rpc-ws-enabled --rpc-ws-port=8546 --p2p-port=30303;
+        --rpc-ws-enabled --rpc-ws-port=8546 --p2p-port=30303 --min-gas-price=0 \
+        --miner-coinbase f17f52151EbEF6C7334FAD080c5704D77216b732;
     volumes:
       - ./genesis.json:/opt/besu/genesis.json
       - ./node-1/data:/opt/besu/data
     networks:
       besu-network:
-        ipv4_address: 172.16.239.32
+        ipv4_address: 172.16.239.8

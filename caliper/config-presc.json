@@ -4,10 +4,10 @@
         "command": {}
     },
     "ethereum": {
-        "url": "ws://172.16.239.35:8546",
-        "contractDeployerAddress": "0xD1cf9D73a91DE6630c2bb068Ba5fDdF9F0DEac09",
-        "contractDeployerAddressPrivateKey": "0x797c13f7235c627f6bd013dc17fff4c12213ab49abcf091f77c83f16db10e90b",
-        "fromAddressSeed": "0x3f841bf589fdf83a521e55d51afddc34fa65351161eead24f064855fc29c9580",
+        "url": "ws://172.16.239.7:8546",
+        "contractDeployerAddress": "0xf17f52151EbEF6C7334FAD080c5704D77216b732",
+        "contractDeployerAddressPrivateKey": "0xae6ae8e5ccbfb04590405997ee2d52d2b330726137b875053c36d94e974d162f",
+        "fromAddressSeed": "0xae6ae8e5ccbfb04590405997ee2d52d2b330726137b875053c36d94e974d162f",
         "transactionConfirmationBlocks": 12,
         "contracts": {
             "simple": {
