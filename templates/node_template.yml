@@ -15,7 +15,6 @@
     volumes:
       - ./genesis.json:/opt/besu/genesis.json
       - ./node-{node_num}/data:/opt/besu/data
-      - ./log-config.xml:/config/log-config.xml
       - ./config.toml:/config/config.toml
     depends_on:
       - node-1
