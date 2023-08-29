@@ -25,4 +25,4 @@ services:
       - ./node-1/data:/opt/besu/data
     networks:
       besu-network:
-        ipv4_address: 172.16.239.30
+        ipv4_address: 172.16.239.32

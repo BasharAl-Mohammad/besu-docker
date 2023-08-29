@@ -17,4 +17,4 @@ services:
           - .:/hyperledger/caliper/workspace
         networks:
           besu-docker_besu-network:
-            ipv4_address: 172.16.239.35
+            ipv4_address: 172.16.239.31

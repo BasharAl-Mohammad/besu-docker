@@ -1,10 +1,10 @@
-identity="bashar-Predator-PH317-52"
+# logging="DEBUG"
+# identity="bashar-Predator-PH317-52"
 nat-method="AUTO"
 host-allowlist=["*"]
 min-gas-price=0
 
-
-p2p-host="172.25.11.75"
+# p2p-host="172.25.11.75"
 p2p-port=30303
 
 # RPC HTTP related

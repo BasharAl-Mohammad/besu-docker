@@ -10,7 +10,7 @@
         /opt/besu/bin/besu --data-path=/opt/besu/data \
          --genesis-file=/opt/besu/genesis.json \
          --config-file=/config/config.toml \
-         --bootnodes=enode://{enode}@172.16.239.30:30303 --p2p-port=30303;
+         --bootnodes=enode://{enode}@172.16.239.32:30303 --p2p-port=30303;
 
     volumes:
       - ./genesis.json:/opt/besu/genesis.json

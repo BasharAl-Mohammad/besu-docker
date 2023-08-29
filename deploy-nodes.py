@@ -19,7 +19,7 @@ def generate_docker_compose(num_nodes):
         enode = enode.read()
 
     for node_num in range(2, num_nodes + 1):
-        ip_suffix = node_num + 29
+        ip_suffix = node_num + 31
         compose_content += node_template.format(node_num=node_num, ip_suffix=ip_suffix,enode=enode[2:])
         
     with open("docker-compose.yml", "w") as file:
@@ -330,7 +330,8 @@ def generate_ethash_structure(ARGS):
         enode = enode.read()
 
     for node_num in range(2, ARGS[0] + 1):
-        ip_suffix = node_num + 29
+        ip_suffix = node_num + 31
+
         compose_content += node_template.format(node_num=node_num, ip_suffix=ip_suffix,enode=enode[2:])
         
     with open("docker-compose.yml", "w") as file:
