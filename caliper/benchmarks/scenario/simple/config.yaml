@@ -45,11 +45,13 @@ test:
         arguments:
           << : *simple-args
           money: 100
+
 monitors:
   resource:
   - module: docker
     options:
       interval: 5
-      cpuUsageNormalization: true
       containers:
-      - all
+      - http://172.16.239.9:2375/node-2
+      - http://172.16.239.10:2375/node-3
+      - http://172.16.239.11:2375/node-4
