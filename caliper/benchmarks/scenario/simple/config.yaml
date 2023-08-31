@@ -1,7 +1,3 @@
-simpleArgs: &id001
-    initialMoney: 10000
-    moneyToTransfer: 100
-    numberOfAccounts: 2000
 test:
     name: simple
     description: This is an example benchmark for Caliper, to test the backend DLT's
@@ -55,11 +51,11 @@ test:
                 money: 100
 
 monitors:
-    resource:
-    -   module: docker
-        options:
-            interval: 5
-            containers:
-            - http://172.16.239.9:2375/node-2
-            - http://172.16.239.10:2375/node-3
-            - http://172.16.239.11:2375/node-4
+  resource:
+  - module: docker
+    options:
+      interval: 5
+      containers:
+      - http://172.16.239.9:2375/node-2
+      - http://172.16.239.10:2375/node-3
+      - http://172.16.239.11:2375/node-4

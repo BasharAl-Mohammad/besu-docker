@@ -22,6 +22,7 @@ services:
       - CALIPER_NETWORKCONFIG=config-presc.json
     volumes:
       - .:/hyperledger/caliper/workspace
+      - //var/run/docker.sock:/var/run/docker.sock
     depends_on:
       - loadbalancer
     networks:
