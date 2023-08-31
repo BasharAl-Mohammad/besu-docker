@@ -1,4 +1,4 @@
-# logging="DEBUG"
+logging="ALL"
 nat-method="AUTO"
 host-allowlist=["*"]
 min-gas-price=0

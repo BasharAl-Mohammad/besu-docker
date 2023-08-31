@@ -1,32 +1,38 @@
 import subprocess
 import os
 import json
+import sys
 
-def run_command(command):
-    try:
-        subprocess.run(command, shell=True, check=True)
-    except subprocess.CalledProcessError as e:
-        print(f"Command failed with exit code {e.returncode}: {e.cmd}")
-        print(e.output.decode('utf-8'))
-        exit(1)
 
-with open('nodes_info.json', 'r') as file:
-    data = json.load(file)
+def check_arguments ():
+    
+    return "hello"
 
-ip_list = []
+# def run_command(command):
+#     try:
+#         subprocess.run(command, shell=True, check=True)
+#     except subprocess.CalledProcessError as e:
+#         print(f"Command failed with exit code {e.returncode}: {e.cmd}")
+#         print(e.output.decode('utf-8'))
+#         exit(1)
 
-for node_name, node_data in data.items():
-    ip_address = node_data['ip']
-    ip_list.append(ip_address)
+# with open('nodes_info.json', 'r') as file:
+#     data = json.load(file)
 
-# prepare NGINX config
-with open(os.path.join('templates/bpet-base'), 'r') as f:
-    nginx_config = f.read()
-upstream_servers = [f"    server {ip}:8546;" for ip in ip_list]
-upstream_servers = '\n'.join(upstream_servers)
-nginx_config = nginx_config.replace('# upstream servers', upstream_servers)
-with open(os.path.join('bpet'), 'w') as f:
-    f.write(nginx_config)
+# ip_list = []
+
+# for node_name, node_data in data.items():
+#     ip_address = node_data['ip']
+#     ip_list.append(ip_address)
+
+# # prepare NGINX config
+# with open(os.path.join('templates/bpet-base'), 'r') as f:
+#     nginx_config = f.read()
+# upstream_servers = [f"    server {ip}:8546;" for ip in ip_list]
+# upstream_servers = '\n'.join(upstream_servers)
+# nginx_config = nginx_config.replace('# upstream servers', upstream_servers)
+# with open(os.path.join('bpet'), 'w') as f:
+#     f.write(nginx_config)
 # # update NGINX config
 # # set no password rules in /etc/sudoers.d (not necessary for cloud images)
 # command = ['sudo', 'cp', 'bpet', '/etc/nginx/sites-enabled/bpet']
@@ -45,3 +51,8 @@ with open(os.path.join('bpet'), 'w') as f:
 #     --caliper-benchconfig benchmarks/scenario/simple/config.yaml \
 #     --caliper-networkconfig config.json --caliper-flow-skip-install'
 # run_command(command2)
+
+if __name__ == '__main__':
+
+    
+    print(check_arguments())
