@@ -56,6 +56,6 @@ monitors:
     options:
       interval: 5
       containers:
-      - http://172.16.239.9:2375/node-2
-      - http://172.16.239.10:2375/node-3
-      - http://172.16.239.11:2375/node-4
+      - http://172.17.0.1:2375/node-4
+      - http://172.17.0.1:2375/node-2
+      - http://172.17.0.1:2375/node-3
