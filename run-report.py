@@ -111,7 +111,7 @@ def save_logs(test_directory):
                 print(f"Error saving logs for container '{container_name}': {e}")
 
 if __name__ == '__main__':
-    for x in range(1,2):
+    for x in range(1,5):
         # #Create artifacts
         testname, txr = setup_test()
         subprocess.run(['docker','compose','up','-d'])
