@@ -19,4 +19,5 @@
     depends_on:
       - node-1
     networks:
-      - besu-network
+      besu-network:
+        ipv4_address: 172.16.239.{ip_suffix}

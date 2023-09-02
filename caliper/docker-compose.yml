@@ -5,16 +5,9 @@ networks:
     external: true
 
 services:
-  loadbalancer:
-    image: nginx:latest
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-    networks:
-      besu-docker_besu-network:
-        ipv4_address: 172.16.239.7
   caliper:
     container_name: caliper
-    image: hyperledger/caliper:0.5.0
+    image: hyperledger/caliper:0.5.1-unstable-20230521222045
     command: launch manager
     environment:
       - CALIPER_BIND_SUT=besu:latest
@@ -23,8 +16,6 @@ services:
     volumes:
       - .:/hyperledger/caliper/workspace
       - //var/run/docker.sock:/var/run/docker.sock
-    depends_on:
-      - loadbalancer
     networks:
       besu-docker_besu-network:
         ipv4_address: 172.16.239.6
