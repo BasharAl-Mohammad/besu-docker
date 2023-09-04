@@ -1,0 +1,14 @@
+{
+    "node-3": {
+        "id": "9623ae0709f6a595376640d18734da7de41f4a7f0a76a135c7450bf0570e6cc3",
+        "ip": "172.16.239.10",
+        "private_key": "0xb09fb71301499b483ffc9209091ce61d7201bc243fcda7e131aaeabd1c58e8fa",
+        "public_key": "0xCBCA9e72Cca778fDFd5f60A86c166dfB18Ed8F45"
+    },
+    "node-2": {
+        "id": "a6d5d7797ebfa4e78a869ad6384731fe2b1113cec0d1e8fc0400f192029e3f7f",
+        "ip": "172.16.239.9",
+        "private_key": "0x05306757396a8f3f736d3366f9d20e02b5ccfcf8a9256c1597e774fe9589ab9d",
+        "public_key": "0x5CB644e9a6b9474c5D6F91fa4f5Cf5c734377580"
+    }
+}

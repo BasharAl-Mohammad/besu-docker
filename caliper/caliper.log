@@ -1,0 +1,7 @@
+2023.09.03-11:02:31.578[90m debug[39m [caliper] [rateControl.js] 	Constructed a winston logger with the specified settings
+2023.09.03-11:02:32.118[32m info [39m [caliper] [cli-launch-manager] 	Binding specification is present, performing binding for "besu:latest"
+2023.09.03-11:02:32.122[33m warn [39m [caliper] [bind] 	Working directory not specified. Using "/hyperledger/caliper/workspace"
+2023.09.03-11:02:32.122[32m info [39m [caliper] [bind] 	User-provided arguments for npm: "-g"
+2023.09.03-11:02:32.123[32m info [39m [caliper] [bind] 	Binding for besu@latest. This might take some time...
+2023.09.03-11:02:32.123[32m info [39m [caliper] [bind] 	Using working directory: /hyperledger/caliper/workspace
+2023.09.03-11:02:32.123[32m info [39m [caliper] [bind] 	Calling npm with: install -g web3@1.3.0

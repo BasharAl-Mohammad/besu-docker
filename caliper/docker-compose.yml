@@ -14,7 +14,7 @@ services:
       - CALIPER_BENCHCONFIG=benchmarks/scenario/simple/config.yaml
       - CALIPER_NETWORKCONFIG=config-presc.json
     volumes:
-      - .:/hyperledger/caliper/workspace
+      - ./:/hyperledger/caliper/workspace
       - //var/run/docker.sock:/var/run/docker.sock
     networks:
       besu-docker_besu-network:

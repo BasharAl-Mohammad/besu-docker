@@ -7,6 +7,7 @@ import docker
 from web3 import Web3
 import re
 import shutil
+import yaml
 
 def setup_test ():
     CONSENSUS = sys.argv[1]
@@ -46,7 +47,7 @@ def setup_test ():
             txr=1000
             subprocess.run(['python3','deploy-nodes.py','QBFT','4','2','30000','4'])
             testname="QBFT_4_2_1000"
-    return testname, txr
+    return testname, txr, nn
 
 def containers_info():
     client = docker.from_env()
@@ -111,9 +112,8 @@ def save_logs(test_directory):
                 print(f"Error saving logs for container '{container_name}': {e}")
 
 if __name__ == '__main__':
-    for x in range(1,5):
-        # #Create artifacts
-        testname, txr = setup_test()
+    for x in range(1,6):
+        testname, txr, nn = setup_test()
         subprocess.run(['docker','compose','up','-d'])
         time.sleep(60)
         containers_info()
@@ -121,6 +121,23 @@ if __name__ == '__main__':
         update_nginx()
         subprocess.run(['docker','compose', '-f', './nginx/docker-compose.yml', 'up', '-d'])
         time.sleep(30)
+        with open('caliper/benchmarks/scenario/simple/config.yaml', 'r') as file:
+            data = yaml.safe_load(file)
+        for round_data in data['test']['rounds']:
+            round_data['rateControl']['opts']['tps'] = txr
+
+        with open('nodes_info.json', 'r') as nodes_info_file:
+            nodes_info = json.load(nodes_info_file)
+
+        container_urls = [
+            f"http://172.17.0.1:2375/{node}"
+            for node, info in nodes_info.items()
+        ]
+        data['monitors']['resource'][0]['options']['containers'] = container_urls
+        data['test']['workers']['number'] = 10
+
+        with open('caliper/benchmarks/scenario/simple/config.yaml', 'w') as file:
+            yaml.dump(data, file, default_flow_style=False)
         subprocess.run(['docker','compose', '-f', './caliper/docker-compose.yml', 'up'])
         time.sleep(10)
         subprocess.run(['docker','compose','stop'])
@@ -136,6 +153,5 @@ if __name__ == '__main__':
         save_logs(test_directory=test_directory)
         subprocess.run(['docker','compose', '-f', './caliper/docker-compose.yml', 'down'])
         subprocess.run(['docker','compose', '-f', './nginx/docker-compose.yml', 'down'])
-        # subprocess.run(['docker','compose','stop'])
         subprocess.run(['docker','compose','down'])
 
