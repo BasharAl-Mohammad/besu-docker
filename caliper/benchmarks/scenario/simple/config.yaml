@@ -4,10 +4,8 @@ monitors:
     options:
       containers:
       - http://172.17.0.1:2375/node-4
-      - http://172.17.0.1:2375/node-3
-      - http://172.17.0.1:2375/node-5
-      - http://172.17.0.1:2375/node-6
       - http://172.17.0.1:2375/node-2
+      - http://172.17.0.1:2375/node-3
       interval: 5
 test:
   description: This is an example benchmark for Caliper, to test the backend DLT's
