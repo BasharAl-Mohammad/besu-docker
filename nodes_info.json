@@ -1,14 +1,32 @@
 {
+    "node-4": {
+        "id": "8ee7558176aa8d6cb8f3e7f65f815b4fa84267a6ca6f2af2c037022662486a26",
+        "ip": "172.16.239.11",
+        "private_key": "0x8caec5b07775f961dd269b619ed360bb0bd9ad9da3ad006b97b2b19caac2f7d7",
+        "public_key": "0xE1A66e93F96f70F4dD28Bb67854b23eB5A9D1103"
+    },
     "node-3": {
-        "id": "9623ae0709f6a595376640d18734da7de41f4a7f0a76a135c7450bf0570e6cc3",
+        "id": "8bc8041bdfd5f69bc7f3ed0263c53a2d5a758f951de2d03b90013768c43adbcf",
         "ip": "172.16.239.10",
-        "private_key": "0xb09fb71301499b483ffc9209091ce61d7201bc243fcda7e131aaeabd1c58e8fa",
-        "public_key": "0xCBCA9e72Cca778fDFd5f60A86c166dfB18Ed8F45"
+        "private_key": "0xd03b40dc9327236006bbf06d0e01dd4cde7916e4e0bbe13a359818affa3e4fab",
+        "public_key": "0xd39aD809E9b909b4df39Aa049892DeCBBc4199B6"
+    },
+    "node-5": {
+        "id": "68c26a4b358cc155bda4bd44fee3d48013cf3478c6b5e59c2d69a3cbfa483278",
+        "ip": "172.16.239.12",
+        "private_key": "0x242428386af2aeef45776db55ed1af8fc44ccfa69458aff86d1d47ec48158a54",
+        "public_key": "0xFc09BEcd4e18Db10bE47CfbADbCef8B67E0f8a5c"
+    },
+    "node-6": {
+        "id": "495c4871cdc16a7c58d2a60c53b511950baaa41647dd1124725047e5a6fc930a",
+        "ip": "172.16.239.13",
+        "private_key": "0x8f6b2fa703c2cf2fec006feff277e98abd98cf47d1ebe5836999d4aac8dd08e1",
+        "public_key": "0x96b54259E4708DD5E06827E6E11d3EAfAcb5A9F3"
     },
     "node-2": {
-        "id": "a6d5d7797ebfa4e78a869ad6384731fe2b1113cec0d1e8fc0400f192029e3f7f",
+        "id": "40515414cbd7ea1341688b9ca7eff156e4cb113fe2beedd20407f5a4522be0f9",
         "ip": "172.16.239.9",
-        "private_key": "0x05306757396a8f3f736d3366f9d20e02b5ccfcf8a9256c1597e774fe9589ab9d",
-        "public_key": "0x5CB644e9a6b9474c5D6F91fa4f5Cf5c734377580"
+        "private_key": "0x66168f2b70ff5d2ab3401005853e2b49843c3fdbd87e8312c4c818856b89887b",
+        "public_key": "0xB9B363F95c9c8f75d83E83bF208ba6cfdbDa7632"
     }
 }

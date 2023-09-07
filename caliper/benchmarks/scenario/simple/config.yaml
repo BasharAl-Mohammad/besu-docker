@@ -3,7 +3,10 @@ monitors:
   - module: docker
     options:
       containers:
+      - http://172.17.0.1:2375/node-4
       - http://172.17.0.1:2375/node-3
+      - http://172.17.0.1:2375/node-5
+      - http://172.17.0.1:2375/node-6
       - http://172.17.0.1:2375/node-2
       interval: 5
 test:
@@ -16,7 +19,7 @@ test:
     label: open
     rateControl:
       opts:
-        tps: 800
+        tps: 1000
       type: fixed-rate
     txNumber: 2000
     workload:
@@ -30,7 +33,7 @@ test:
     label: query
     rateControl:
       opts:
-        tps: 800
+        tps: 1000
       type: fixed-rate
     txNumber: 2000
     workload:
@@ -44,7 +47,7 @@ test:
     label: transfer
     rateControl:
       opts:
-        tps: 800
+        tps: 1000
       type: fixed-rate
     txNumber: 2000
     workload:
@@ -55,5 +58,5 @@ test:
         numberOfAccounts: 2000
       module: benchmarks/scenario/simple/transfer.js
   workers:
-    number: 2
+    number: 10
     type: local
