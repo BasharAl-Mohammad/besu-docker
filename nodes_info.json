@@ -1,0 +1,20 @@
+{
+    "node-2": {
+        "id": "68a792ea83dfd1c89688d693e13fa0ca90d0e283454f774c8c932fd64b23601d",
+        "ip": "172.16.239.9",
+        "private_key": "0xf846f719a2a1d5dd3ba285037a161d7cb4f048c53afb38b2f16e89fd741d9997",
+        "public_key": "0x8067144f715c67DEE7E48a6FA10DF1f175d48718"
+    },
+    "node-3": {
+        "id": "5322d4b63ecac6681f7a84ae313962a1e870cd83a27208b9d8c88a1c6a4bb1a1",
+        "ip": "172.16.239.10",
+        "private_key": "0x33f399088efa4fcb8c600e6a6c37a2a399349e82b126f2756dcce3fe46ef4a4c",
+        "public_key": "0x2Af0d4Dbb667Bae179AdAd476D5d37a5A365b726"
+    },
+    "node-4": {
+        "id": "8b91adb2c8e7637e39fc913959dd636eb134724507e56c5921890b8d440de827",
+        "ip": "172.16.239.11",
+        "private_key": "0x80035c3d98fbcc8983b0e3cfaaf23865258425dde6dd2450ca416799c1577ecd",
+        "public_key": "0x55454f156C9a37D087512E4fc81d3fE955807654"
+    }
+}

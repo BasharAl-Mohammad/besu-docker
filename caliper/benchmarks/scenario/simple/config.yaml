@@ -2,10 +2,16 @@ monitors:
   resource:
   - module: docker
     options:
+      charting:
+        bar:
+          metrics:
+          - Memory(avg)
+          - CPU%(avg)
+        polar:
+          metrics:
+          - all
       containers:
-      - http://172.17.0.1:2375/node-4
-      - http://172.17.0.1:2375/node-2
-      - http://172.17.0.1:2375/node-3
+      - all
       interval: 5
 test:
   description: This is an example benchmark for Caliper, to test the backend DLT's

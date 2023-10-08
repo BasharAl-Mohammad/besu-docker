@@ -112,7 +112,7 @@ def save_logs(test_directory):
                 print(f"Error saving logs for container '{container_name}': {e}")
 
 if __name__ == '__main__':
-    for x in range(1,6):
+    # for x in range(1,6):
         testname, txr, nn = setup_test()
         subprocess.run(['docker','compose','up','-d'])
         time.sleep(60)
@@ -133,7 +133,7 @@ if __name__ == '__main__':
             f"http://172.17.0.1:2375/{node}"
             for node, info in nodes_info.items()
         ]
-        data['monitors']['resource'][0]['options']['containers'] = container_urls
+        # data['monitors']['resource'][0]['options']['containers'] = container_urls
         data['test']['workers']['number'] = 10
 
         with open('caliper/benchmarks/scenario/simple/config.yaml', 'w') as file:
@@ -141,7 +141,7 @@ if __name__ == '__main__':
         subprocess.run(['docker','compose', '-f', './caliper/docker-compose.yml', 'up'])
         time.sleep(10)
         subprocess.run(['docker','compose','stop'])
-        test_directory = 'reports/'+testname+'/'+str(x)
+        test_directory = 'reports/'+testname+'/'+str(1)
         if not os.path.exists(test_directory):
             os.makedirs(test_directory)
             print(f"Directory '{test_directory}' created successfully.")
